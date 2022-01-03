@@ -1,0 +1,26 @@
+﻿@model Brosur
+@{
+    ViewData["Title"] = "Market Broşürü";
+}
+
+
+<!-- Product Catagories Area Start -->
+<div class="products-catagories-area clearfix">
+    <div class="amado-pro-catagory clearfix">
+        <!-- Single Catagory -->
+        @foreach (var campaign in Model.Campaigns)
+        {
+        <div class="single-products-catagory clearfix">
+            <a href="/@Model.Code/@campaign.Contents">
+                <img src="img/bros-img/@Model.Code/@campaign.Contents/1.jpg" alt="">
+                <!-- Hover Content -->
+                <div class="hover-content">
+                    <div class="line"></div>
+                    <p>@Model.Brand</p>
+                    <h4>@campaign.Title</h4>
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>
